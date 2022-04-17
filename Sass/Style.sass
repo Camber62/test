@@ -1,0 +1,201 @@
+$color_one: #ED4242
+$color_background: #F9F9F9
+$color_text_grey: #65696E
+
+
+@font-face
+  font-family: 'Museo Sans Cyrl'
+  src: local('Museo Sans Cyrl 500'), local('MuseoSansCyrl-500'), url('/fonts/Museosanscyrl500.woff2') format('woff2'), url('/fonts/Museosanscyrl500.woff') format('woff'), url('/fonts/Museosanscyrl500.ttf') format('truetype')
+  font-weight: 500
+  font-style: normal
+
+*
+  font-family: 'Museo Sans Cyrl'
+
+body
+  padding: 0
+  margin: 0
+
+header
+  background: $color_background
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid #E8E8E8
+  height: 75px
+
+
+.header_left
+  display: flex
+  align-items: center
+  padding: 21px 0 21px 71px
+
+  &-logo
+    background-image: url("/icons/logo (4) 3.svg")
+    width: 161px
+    height: 33px
+
+
+  &-link
+    a
+      font-weight: 300
+      font-size: 18px
+      line-height: 22px
+      margin-left: 171px
+
+
+.header_right
+  display: flex
+  align-items: center
+
+  &-login
+    display: flex
+    align-items: center
+
+  &-search
+    button
+      background: $color_one
+      width: 74px
+      height: 74px
+      border: none
+      margin: 0 0 0 70px
+      padding: 0
+
+      img
+
+
+.main
+  display: flex
+
+nav
+  background: $color_background
+  width: 300px
+  height: 1006px
+  border-right: 1px solid #E8E8E8
+  border-bottom: 1px solid #E8E8E8
+
+
+.active
+  background: $color_one
+  color: white
+
+
+.nav
+  &_sidbar
+    height: 787px
+
+    ul
+      padding-left: 0
+
+      li
+        list-style: none
+        width: 240px
+        height: 45px
+        padding-left: 30px
+
+        a
+          display: flex
+          align-items: center
+          width: 100%
+          height: 100%
+
+          &:hover
+            background: $color_one
+            color: white
+
+          span
+            padding-left: 15px
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+
+        div
+          width: 30px
+          padding-left: 20px
+          text-align: center
+
+  &_footer
+    height: 218px
+    border-top: 1px solid #E8E8E8
+    padding-left: 30px
+    padding-top: 27px
+
+    a
+      padding-top: 27px
+      margin: 0
+      color: black
+      font-weight: 300
+      font-size: 13px
+      line-height: 16px
+
+    p
+      padding: 22px 0 31px 0
+      margin: 0
+      color: black
+      font-weight: 300
+      font-size: 13px
+      line-height: 16px
+
+    &-social
+      padding-bottom: 41px
+
+
+.social_telegram, .social_vk
+  display: flex
+  padding-bottom: 17px
+
+  span
+    padding-left: 15px
+    font-weight: 300
+    font-size: 13px
+    line-height: 16px
+    font-style: normal
+
+
+.section_info
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  h1
+    font-style: normal
+    font-weight: 600
+    font-size: 42px
+    line-height: 50px
+
+.expand
+  display: flex
+  align-items: center
+
+
+.section_media
+  display: grid
+  grid-template-rows: 1fr 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 2vw
+  &-card
+
+    max-width: 360px
+    &-img
+      padding-bottom: 49%
+      position: relative
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+      button
+        width: 61px
+        height: 61px
+        background-image: url("/icons/Play.svg")
+        background-repeat: no-repeat
+        background-size: cover
+        border-radius: 50%
+        border: none
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
