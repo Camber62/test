@@ -14,48 +14,53 @@
 <header>
     <div class="header_left">
         <div class="header_left-logo"></div>
-        <div class="header_left-link"><a>На сайт</a></div>
+        <div class="header_left-link"><a href="#">На сайт</a></div>
     </div>
     <div class="header_right">
-        <div class="header_right-login">
+        <div class="header_right_login">
             <img alt="picture" src="icons/Group%2090.svg">
             <span>Петров С.</span>
         </div>
-        <div class="header_right-search">
-            <button class="btn"><img alt="picture" src="icons/Group%2091.svg"></button>
+        <div class="header_right_search">
+            <button class="header_right_search_btn">
+                <img alt="picture" src="icons/Group%2091.svg">
+            </button>
+            <button class="header_right_burger">
+                <div class="burger"></div>
+            </button>
         </div>
     </div>
 </header>
 <div class="main">
     <nav>
-        <div class="nav_sidbar">
+        <div class="nav_sidebar">
             <ul>
                 <li>
                     <a class="active">
-                        <div class="nav_li-img"><img src="icons/Home.svg">
+                        <div class="nav_li-img"><img alt="pictures" src="icons/Home.svg">
                         </div>
-                        <span>Главная</span>
+                        <p>Главная</p>
 
                     </a>
                 </li>
                 <li>
                     <a>
-                        <div class="nav_li-img"><img src="icons/Star%201_1.svg"></div>
-                        <span>Избранное видео</span>
+                        <div class="nav_li-img"><img alt="pictures" src="icons/Star%201_1.svg"></div>
+                        <p>Избранное видео</p>
 
                     </a>
                 </li>
                 <li>
                     <a>
-                        <div class="nav_li-img"><img src="icons/Group2.svg"></div>
-                        <span>Мои заметки</span>
+                        <div class="nav_li-img"><img alt="pictures" src="icons/Group2.svg"></div>
+                        <p>Мои заметки</p>
 
                     </a>
                 </li>
                 <li>
                     <a>
-                        <div class="nav_li-img"><img src="icons/time2.svg"></div>
-                        <span>История поиска</span>
+                        <div class="nav_li-img"><img alt="pictures" src="icons/time2.svg"></div>
+                        <p>История поиска</p>
 
                     </a>
                 </li>
@@ -68,11 +73,11 @@
             <div class="nav_footer-social">
                 <div class="social_telegram">
                     <img alt="picture" src="icons/Vk.svg">
-                    <span>Телеграм</span>
+                    <span><a href="#">Телеграм</a></span>
                 </div>
                 <div class="social_vk">
                     <img alt="picture" src="icons/Vk%20(1).svg">
-                    <span>Вконтактe</span>
+                    <span><a href="#">Вконтактe</a></span>
                 </div>
 
             </div>
@@ -82,20 +87,215 @@
         <div class="section_info">
             <h1>Доступные видео</h1>
             <div class="expand">
-                <div class="expand_img"><img alt="picture" src="icons/video.svg"></div>
-                <span>Смотреть все</span>
+                <a>Смотреть все</a>
+                <button class="expand_img"><img alt="picture" src="icons/video.svg"></button>
             </div>
         </div>
         <div class="section_media">
             <div class="section_media-card">
                 <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures10.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures2.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn favorites_btn_active">
+                        <img alt="pictures" src="icons/Star-w1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures1.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures3.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures4.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn favorites_btn_active">
+                        <img alt="pictures" src="icons/Star-w1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures5.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures6.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn favorites_btn_active">
+                        <img alt="pictures" src="icons/Star-w1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures7.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures8.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn favorites_btn_active">
+                        <img alt="pictures" src="icons/Star-w1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/pictures9.jpg">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
+                    <img alt="picture" src="icons/Rectangle%2063.png">
+                    <button></button>
+                </div>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
+                <hr>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn favorites_btn_active">
+                        <img alt="pictures" src="icons/Star-w1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="section_media-card">
+                <div class="section_media-card-img">
                     <img alt="picture" src="icons/Rectangle%2063%20(1).jpg">
                     <button></button>
                 </div>
-                <p>Теория относительности Энштейна</p>
+                <p class="section_media-card-title">Теория относительности Энштейна</p>
                 <hr>
-                <p>Преподаватель:<span> Федерико Фелинни</span></p>
-                <p>Добавлено:<span> 12 июля 2021</span></p></div>
+                <div class="section_media-card-data">
+                    <div class="information">
+                        <p>Преподаватель:<span> Федерико Фелинни</span></p>
+                        <p>Добавлено:<span> 12 июля 2021</span></p>
+                    </div>
+                    <button class="favorites_btn">
+                        <img alt="pictures" src="icons/Star%201_1.svg">
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 </div>

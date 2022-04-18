@@ -2,6 +2,13 @@ $color_one: #ED4242
 $color_background: #F9F9F9
 $color_text_grey: #65696E
 
+@mixin burger-line()
+  width: 24px
+  height: 4px
+  background: $color_one
+
+
+
 
 @font-face
   font-family: 'Museo Sans Cyrl'
@@ -29,6 +36,8 @@ header
   display: flex
   align-items: center
   padding: 21px 0 21px 71px
+  @media (max-width: 1280px)
+    padding-left: 15px
 
   &-logo
     background-image: url("/icons/logo (4) 3.svg")
@@ -41,31 +50,72 @@ header
       font-weight: 300
       font-size: 18px
       line-height: 22px
-      margin-left: 171px
-
+      margin-left: 85px
+      text-decoration: none
+      color: #2E3237
+      @media (max-width: 768px)
+        display: none
 
 .header_right
   display: flex
   align-items: center
 
-  &-login
+  &_login
     display: flex
     align-items: center
+    span
+      @media (max-width: 768px)
+        display: none
+    img
+      padding-right: 10px
 
-  &-search
-    button
+  &_search
+    &_btn
       background: $color_one
       width: 74px
       height: 74px
       border: none
       margin: 0 0 0 70px
       padding: 0
+      @media (max-width: 768px)
+        display: none
 
-      img
+
+
+
+
+.header_right_burger
+    height: 30px
+    width: 30px
+    background: none
+    border: none
+    margin-right: 5px
+    @media (min-width: 768px)
+     display: none
+
+
+.burger
+    position: relative
+    @include burger-line()
+    background: black
+    &::after
+      content: ''
+      position: absolute
+      top: -6px
+      left: 0
+      @include burger-line()
+    &::before
+      content: ''
+      position: absolute
+      bottom: -6px
+      left: 0
+      @include burger-line()
 
 
 .main
   display: flex
+  @media (max-width: 768px)
+    flex-flow: wrap-reverse
 
 nav
   background: $color_background
@@ -73,16 +123,25 @@ nav
   height: 1006px
   border-right: 1px solid #E8E8E8
   border-bottom: 1px solid #E8E8E8
-
-
+  @media (max-width: 1280px)
+    width: 200px
+    height: 100%
+  @media (max-width: 768px)
+    width: 100%
 .active
   background: $color_one
   color: white
 
 
+
 .nav
-  &_sidbar
+
+
+
+  &_sidebar
     height: 787px
+    @media (max-width: 768px)
+      display: none
 
     ul
       padding-left: 0
@@ -91,7 +150,10 @@ nav
         list-style: none
         width: 240px
         height: 45px
-        padding-left: 30px
+        padding: 0 30px
+        @media (max-width: 1280px)
+          width: 200px
+          padding: 0
 
         a
           display: flex
@@ -119,6 +181,9 @@ nav
     border-top: 1px solid #E8E8E8
     padding-left: 30px
     padding-top: 27px
+    @media (max-width: 768px)
+      padding-left: 0
+      text-align: center
 
     a
       padding-top: 27px
@@ -138,6 +203,9 @@ nav
 
     &-social
       padding-bottom: 41px
+      @media (max-width: 768px)
+        display: inline-block
+
 
 
 .social_telegram, .social_vk
@@ -150,7 +218,15 @@ nav
     font-size: 13px
     line-height: 16px
     font-style: normal
+    a
+      text-decoration: none
 
+section
+  width: 100%
+  padding-left: 45px
+  padding-right: 45px
+  @media (max-width: 768px)
+    padding: 0
 
 .section_info
   display: flex
@@ -162,29 +238,53 @@ nav
     font-weight: 600
     font-size: 42px
     line-height: 50px
+    @media (max-width: 768px)
+      margin-left: 15px
 
 .expand
   display: flex
   align-items: center
+  a
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+    @media (max-width: 768px)
+      display: none
+  button
+    background: none
+    border: none
+    padding-top: .5vh
+    padding-left: 11px
 
 
 .section_media
   display: grid
   grid-template-rows: 1fr 1fr 1fr 1fr
-  grid-template-columns: 1fr 1fr 1fr
-  grid-gap: 2vw
-  &-card
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-gap: 30px
+  @media (max-width: 1280px)
+    grid-template-columns: 1fr 1fr 1fr
+  @media (max-width: 1024px)
+    grid-template-columns: 1fr 1fr
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr
 
+
+  &-card
     max-width: 360px
+    justify-self: center
+
+
     &-img
-      padding-bottom: 49%
       position: relative
+      max-width: 360px
+
       img
-        position: absolute
         top: 0
         left: 0
         width: 100%
-        height: 100%
+        height: auto
         object-fit: cover
 
       button
@@ -198,4 +298,36 @@ nav
         position: absolute
         top: 50%
         left: 50%
-        transform: translate(-50%,-50%)
+        transform: translate(-50%, -50%)
+
+    &-title
+      font-weight: 600
+      font-size: 24px
+      line-height: 29px
+    hr
+      border: 1px solid $color_one
+      width: 30px
+      margin: 0
+      margin-top: 9px
+      margin-bottom: 15px
+    &-data
+      display: flex
+      align-items: center
+      justify-content: space-between
+      p
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        margin: 0
+        padding-bottom: 7px
+        color: $color_text_grey
+      span
+        color: black
+.favorites_btn
+  border: none
+  background: none
+  width: 41px
+  height: 41px
+  order: 1
+.favorites_btn_active
+  background: $color_one
